@@ -1,0 +1,218 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ff: "Space Mono", monospace;
+  --bacgroundBody: hsl(185, 41%, 84%);
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light-grayish-cyan2: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--bacgroundBody);
+  font-family: var(--ff);
+  font-size: 24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+}
+
+.header {
+  margin: 0 auto;
+  color: var(--Very-dark-cyan);
+  opacity: 0.85;
+  letter-spacing: 10px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 15px;
+  width: 864px;
+  max-width: 1400px;
+  height: auto;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.operation {
+  background-color: white;
+  width: 50%;
+  margin: 20px;
+  color: hsla(0, 0%, 0%, 0.473);
+  font-size: 1.3rem;
+}
+
+button,
+input[type="button"] {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--ff);
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+}
+.percent {
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  justify-content: space-between;
+}
+
+input[type="button"] {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.custom-percent {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.input-text ~ .custom-percent {
+  width: 100%;
+}
+
+button:hover,
+input[type="button"]:hover,
+.result button:hover {
+  background-color: var(--Dark-grayish-cyan2);
+}
+
+button:active,
+input[type="button"]:active,
+.result button:active {
+  background-color: var(--Strong-cyan);
+}
+
+.input-text {
+  box-sizing: border-box;
+  background-color: var(--Light-grayish-cyan2);
+  border-radius: 5px;
+  border-width: 0;
+  padding: 10px;
+  font-family: var(--ff);
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 26px;
+  text-align: right;
+  outline: none;
+  width: 100%;
+}
+
+.input-text:focus {
+  border: 3px solid var(--Strong-cyan);
+  padding: 7px;
+}
+.tip-selector .buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+.tip-selector input[type="radio"] {
+  display: none;
+}
+
+.tip-selector input[type="number"] {
+  width: 130px;
+  height: 60px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+.tip-selector label {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--ff);
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+  width: 130px;
+  text-align: center;
+  margin: 4px;
+  transition: 0.5s;
+}
+
+.icon {
+  position: relative;
+}
+.icon i {
+  position: absolute;
+  left: 15px;
+  top: +50px;
+}
+
+/*********************************************************************************************************
+*   Result
+**********************************************************************************************************/
+
+.result {
+  box-sizing: border-box;
+  background-color: var(--Very-dark-cyan);
+  width: 50%;
+  height: 90%;
+  margin-right: 20px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-column: auto;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.tip-amount {
+  width: 100%px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tip-amount .des {
+  position: absolute;
+  left: 30px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.tip-amount .des div:last-child {
+  left: 30px;
+  color: #ffffff80;
+  font-size: 0.8rem;
+}
+
+.tip-amount .tip-value {
+  position: absolute;
+  right: 30px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--Strong-cyan);
+}
+
+.result button {
+  padding: 0;
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  margin: 0 30px;
+  width: 350px;
+  font-weight: 900;
+  height: 50px;
+}

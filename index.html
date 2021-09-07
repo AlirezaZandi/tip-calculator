@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/09563bec04.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <h3>SPLI</h3>
+      <h3>TTER</h3>
+    </div>
+    <div class="container">
+      <div class="operation">
+        <form action="#" name="operation-form">
+          <label for="#bill" class="icon"
+            >Bill $
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              min="0"
+              class="input-text input"
+              value="100"
+            />
+            <i class="fas fa-dollar-sign"></i>
+            <br />
+          </label>
+
+          <label class="tip-selector" id="tip"
+            >Select Tip %
+            <br />
+            <div class="buttons">
+              <label for="percent5" style="background-color: hsl(172, 67%, 45%)"
+                >5%<input
+                  type="radio"
+                  name="percent"
+                  id="percent5"
+                  value="5"
+                  checked
+              /></label>
+              <label for="percent10"
+                >10%<input
+                  type="radio"
+                  name="percent"
+                  id="percent10"
+                  value="10"
+              /></label>
+              <label for="percent15"
+                >15%<input
+                  type="radio"
+                  name="percent"
+                  id="percent15"
+                  value="15"
+              /></label>
+              <label for="percent25"
+                >25%<input
+                  type="radio"
+                  name="percent"
+                  id="percent25"
+                  value="25"
+              /></label>
+              <label for="percent50"
+                >50%<input
+                  type="radio"
+                  name="percent"
+                  id="percent50"
+                  value="50"
+              /></label>
+              <input
+                type="number"
+                name="custom-percent"
+                id="custom-percent"
+                min="0"
+                max="100"
+                class="input-text"
+                placeholder="custom"
+              />
+            </div>
+          </label>
+          <br />
+          <label for="NumberOfPeople" class="icon"
+            >Number of people
+            <input
+              type="number"
+              min="1"
+              name="NumberOfPeople"
+              id="NumberOfPeople"
+              class="input-text input"
+              value="1"
+            />
+            <i class="fas fa-user-alt"></i>
+          </label>
+        </form>
+      </div>
+      <div class="result">
+        <div class="tip-amount">
+          <div class="des">
+            <div>Tip Amount</div>
+            <div>/ person</div>
+          </div>
+          <div class="tip-value" id="tip-value">$4.27</div>
+        </div>
+        <div class="tip-amount">
+          <div class="des">
+            <div>Total</div>
+            <div>/ person</div>
+          </div>
+          <div class="tip-value" id="total-value">$0.00</div>
+        </div>
+        <div class="space"></div>
+        <button id="reset-button">Reset</button>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
